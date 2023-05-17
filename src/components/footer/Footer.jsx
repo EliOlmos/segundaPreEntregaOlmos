@@ -4,7 +4,7 @@ import "../footer/footer.css"
 export const Footer = () => {
   return (
       <div className="navbar navbar-expand-lg navbar-light bordeFooter"
-      style={{ backgroundColor: "#0d2d66" }} >
+      style={{ backgroundColor: "#0d2d66", display:"flex", flexDirection: "column" }} >
         <div className="container d-flex justify-content-center" style={{ backgroundColor: "lighgray"}}>
           <button
             type="button"
@@ -25,6 +25,7 @@ export const Footer = () => {
             <i className="fab fa-instagram" style={{color: "#a6be06"}}></i>
           </button>
         </div>
+        <h5 className="text" style={{color:"lightgray", display: "flex"}}>© Todos los derechos reservados</h5>
       </div>
   );
 };
