@@ -1,0 +1,9 @@
+.fondo{
+display: flex;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  flex-direction: column;
+}

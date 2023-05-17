@@ -47,7 +47,7 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li className="nav-item ">
-                <button
+                <NavLink to={"/SobreNosotros"}
                   type="button"
                   className="btn btn-light btn-lg  mx-2"
                   style={{
@@ -57,10 +57,10 @@ const NavBar = () => {
                   }}
                 >
                   Sobre Nosotros
-                </button>
+                </NavLink>
               </li>
               <li className="nav-item ">
-                <button
+              <NavLink to={"/Contacto"}
                   type="button"
                   className="btn btn-light btn-lg  mx-2"
                   style={{
@@ -70,7 +70,7 @@ const NavBar = () => {
                   }}
                 >
                   Contacto
-                </button>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <button

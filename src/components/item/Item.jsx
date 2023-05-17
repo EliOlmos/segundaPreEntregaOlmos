@@ -6,7 +6,7 @@ const Item = ({ id, categoria, titulo, imagen, descripcion, precio }) => {
   const navigate = useNavigate();
   return (
     <div
-      className="card m-3 mt-3 shadow-lg p-3 mb-5 bg-body rounded hoover"
+      className="card m-5 mt-3 shadow-lg p-3 mb-5 bg-body rounded hover"
       style={{ width: "18rem" }}
     >
       <h5 className="card-title">{titulo}</h5>
