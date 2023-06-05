@@ -68,7 +68,7 @@ export const bringData = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(items);
-    }, 2000);
+    }, 20);
   });
 };
 
@@ -76,7 +76,7 @@ export const getItemId = (itemId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(items.find((item) => item.id === itemId));
-    }, 2000);
+    }, 20);
   });
 };
 
@@ -84,6 +84,6 @@ export const getCategory = (itemCategory) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(items.filter((item) => item.categoria === itemCategory));
-    }, 2000);
+    }, 20);
   });
 };
