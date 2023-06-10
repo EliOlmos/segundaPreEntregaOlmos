@@ -11,17 +11,18 @@ import {
 import React from "react";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
+import { GlobalContext } from "../../context/GlobalContex";
 import { db } from "../../firebase/config";
 import CheckoutForm from "../checkoutForm/CheckoutForm";
 
 const Checkout = () => {
-  //const [loading, setLoading] = useState(false)
+  const{setLoading}=useContext(GlobalContext)
   const [orderId, setOrderId] = useState("");
 
   const { cart, total, clearCart } = useContext(CartContext);
 
   const createOrder = async ({ name, phone, email, adress }) => {
-    // setLoading(true)
+    setLoading(true)
     try {
       const objOrder = {
         buyer: {
@@ -70,13 +71,10 @@ const Checkout = () => {
     } catch (error) {
       console.log(error);
     }
-    /* finally {
-           setLoading(false)}*/
+    finally {
+    setLoading(false)}
   };
 
-  /* if (loading) {
-    return <h1>Estamos preparando su orden...</h1>;
-  } */
 
   if (orderId) {
     return <h1>Se ha generado su orden con el identificador: {orderId}</h1>;

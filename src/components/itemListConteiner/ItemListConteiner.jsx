@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import { useParams } from "react-router-dom";
 import ItemList from "../itemList/ItemList";
+import { GlobalContext } from "../../context/GlobalContex";
 
 const ItemListConteiner = () => {
   const [items, setItems] = useState([]);
-  //const [loading, setLoading]= useState(true)
+  const{setLoading}=useContext(GlobalContext)
   const { itemCategory } = useParams();
 
   useEffect(() => {
-    //setLoading(true)
+    setLoading(true)
     const collectionCategory = itemCategory
       ? query(
           collection(db, "products"),
@@ -18,20 +19,20 @@ const ItemListConteiner = () => {
         )
       : collection(db, "products");
     getDocs(collectionCategory)
-      .then((res) => {
+      .then(res => {
         const productsCategory = res.docs.map((doc) => {
           const data = doc.data();
           return { id: doc.id, ...data };
         });
         setItems(productsCategory);
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
-      });
-
-    /* .finally(() => {
+      })
+      .finally(() => {
         setLoading(false);
-      }); */
+      });         
+          
   }, [itemCategory]);
 
   return (

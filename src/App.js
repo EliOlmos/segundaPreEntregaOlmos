@@ -10,28 +10,34 @@ import Contacto from "./components/contacto/Contacto";
 import { CartProvider } from "./context/CartContext";
 import Cart from "./components/cart/Cart";
 import Checkout from "./components/checkout/Checkout";
+import { GlobalProvider } from "./context/GlobalContex";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <CartProvider>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<ItemListConteiner />} />
-            <Route
-              path="/category/:itemCategory"
-              element={<ItemListConteiner />}
-            />
-            <Route path="item/:itemId" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout/>}/>
-            <Route path="*" element={<img src={error404} alt="error" />} />
-            <Route path="/SobreNosotros" element={<SobreNosotros />} />
-            <Route path="/Contacto" element={<Contacto />} />
-          </Routes>
-          <Footer />
-        </CartProvider>
+        <GlobalProvider>
+          <CartProvider>
+            <NavBar />
+            <Layout>
+              <Routes>
+                <Route path="/" element={<ItemListConteiner />} />
+                <Route
+                  path="/category/:itemCategory"
+                  element={<ItemListConteiner />}
+                />
+                <Route path="item/:itemId" element={<ItemDetailContainer />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="*" element={<img src={error404} alt="error" />} />
+                <Route path="/SobreNosotros" element={<SobreNosotros />} />
+                <Route path="/Contacto" element={<Contacto />} />
+              </Routes>
+            </Layout>
+            <Footer />
+          </CartProvider>
+        </GlobalProvider>
       </BrowserRouter>
     </div>
   );
