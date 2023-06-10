@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import ItemCount from "../itemCount/ItemCount";
+import "../itemDetail/itemDetail.css"
 
 const ItemDetail = ({
   id,

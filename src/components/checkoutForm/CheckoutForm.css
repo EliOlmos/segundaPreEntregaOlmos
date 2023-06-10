@@ -1,0 +1,25 @@
+.containerForm{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #a6be06;
+    border-radius: #a6be06;
+    max-width: 450px;
+}
+
+.Form{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: flex-start;
+
+}
+
+label {
+    display: flex;
+    padding: 10px;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+}

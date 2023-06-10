@@ -3,3 +3,31 @@
     border-top: 5px solid #a6be06; ;
     border-bottom: 5px solid #a6be06;
   }
+
+  button {
+    margin:4px;
+   }
+
+   .main-footer{
+    margin: 0 auto;
+    padding-top: 2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+   }
+
+   .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+
+   .list-unstyled{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .text{
+    color: lightgray;
+   }

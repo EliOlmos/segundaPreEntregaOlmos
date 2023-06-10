@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../item/Item.css"
+import "../item/Item.css";
 
 const Item = ({ id, categoria, titulo, imagen, descripcion, precio }) => {
   const navigate = useNavigate();
@@ -14,7 +14,12 @@ const Item = ({ id, categoria, titulo, imagen, descripcion, precio }) => {
       <img src={imagen} className="card-img-top img-fluid" alt={titulo} />
 
       <div className="card-body">
-        <p className="card-text" style={{fontSize:"25px" , fontWeight: "bold"}}>${precio}</p>
+        <p
+          className="card-text"
+          style={{ fontSize: "25px", fontWeight: "bold" }}
+        >
+          ${precio}
+        </p>
       </div>
       <button
         onClick={() => navigate(`/item/${id}`)}

@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg navbar-light bordes"  style={{ backgroundColor: "#0d2d66"}}>
+        className="navbar navbar-expand-lg bordes texto-nav"  style={{ backgroundColor: "#0d2d66"}}>
        
         <div className="container-fluid">
           <Link to={"/"}>
@@ -20,7 +20,7 @@ const NavBar = () => {
             />
           </Link>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbar"
@@ -31,12 +31,12 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbar">
-            <ul className="navbar-nav ">
-              <li className="nav-item ">
+            <ul className="navbar-nav texto-nav">
+              <li className="nav-item navbar-item">
                 <NavLink
                   to={"/"}
                   type="button"
-                  className="btn btn-light btn-lg  mx-2"
+                  className="btn btn-light btn-lg  mx-2 texto-nav"
                   style={{
                     fontSize: "15px",
                     padding: "10px 20px",
@@ -46,10 +46,10 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item ">
+              <li className="nav-item navbar-item">
                 <NavLink to={"/SobreNosotros"}
                   type="button"
-                  className="btn btn-light btn-lg  mx-2"
+                  className="btn btn-light btn-lg  mx-2 texto-nav"
                   style={{
                     fontSize: "15px",
                     padding: "10px 20px",
@@ -59,10 +59,10 @@ const NavBar = () => {
                   Sobre Nosotros
                 </NavLink>
               </li>
-              <li className="nav-item ">
+              <li className="nav-item navbar-item">
               <NavLink to={"/Contacto"}
                   type="button"
-                  className="btn btn-light btn-lg  mx-2"
+                  className="btn btn-light btn-lg  mx-2 texto-nav"
                   style={{
                     fontSize: "15px",
                     padding: "10px 20px",
@@ -72,7 +72,7 @@ const NavBar = () => {
                   Contacto
                 </NavLink>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item navbar-item dropdown">
                 <button
                   className="navbar-nav dropdown-toggle btn btn-light btn-lg btn-floating mx-2"
                   style={{
@@ -85,8 +85,8 @@ const NavBar = () => {
                 >
                   Productos
                 </button>
-                <ul className="dropdown-menu  ">
-                  <li className="nav-item ">
+                <ul className="dropdown-menu texto-nav navbar-item ">
+                  <li className="nav-item navbar-item texto-nav">
                     <NavLink
                       to={"/category/1"}
                       type="button"
@@ -100,11 +100,11 @@ const NavBar = () => {
                       Raquetas
                     </NavLink>
                   </li>
-                  <li className="nav-item ">
+                  <li className="nav-item navbar-item">
                     <NavLink
                       to={"/category/2"}
                       type="button"
-                      className="btn btn-light btn-lg btn-floating mx-2"
+                      className="btn btn-light btn-lg btn-floating mx-2 texto-nav"
                       style={{
                         fontSize: "15px",
                         padding: "10px 20px",
@@ -114,11 +114,11 @@ const NavBar = () => {
                       Zapatillas
                     </NavLink>
                   </li>
-                  <li className="nav-item ">
+                  <li className="nav-item navbar-item">
                     <NavLink
                       to={"/category/3"}
                       type="button"
-                      className="btn btn-light btn-lg btn-floating mx-2"
+                      className="btn btn-light btn-lg btn-floating mx-2 texto-nav"
                       style={{
                         fontSize: "15px",
                         padding: "10px 20px",
@@ -128,11 +128,11 @@ const NavBar = () => {
                       Indumentaria
                     </NavLink>
                   </li>
-                  <li className="nav-item ">
+                  <li className="nav-item navbar-item">
                     <NavLink
                       to={"/category/4"}
                       type="button"
-                      className="btn btn-light btn-lg btn-floating mx-2"
+                      className="btn btn-light btn-lg btn-floating mx-2 texto-nav"
                       style={{
                         fontSize: "15px",
                         padding: "10px 20px",
@@ -147,13 +147,13 @@ const NavBar = () => {
             </ul>
             <form className="d-flex">
               <input
-                className="form-control me-2 btn btn-light"
+                className="form-control me-2 btn btn-light texto-nav"
                 type="search"
                 placeholder="..."
                 aria-label="Search"
               />
               <button
-                className="btn btn-light"
+                className="btn btn-light texto-nav"
                 type="submit"
                 style={{
                   fontSize: "15px",
