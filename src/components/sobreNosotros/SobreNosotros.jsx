@@ -1,5 +1,6 @@
 import React from "react";
 import "../sobreNosotros/SobreNosotros.css";
+import { Link } from "react-router-dom";
 
 const SobreNosotros = () => {
   return (
@@ -24,14 +25,13 @@ const SobreNosotros = () => {
             <footer className="blockquote-footer">
               Podes acceder a más información en nuestro sitio{" "}
               <cite title="Source Title">
-                <a
+                <Link to="https://www.opencup.com.ar/"
                   className="text-muted"
-                  href="https://www.opencup.com.ar/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   www.opencup.com.ar
-                </a>
+                </Link>
               </cite>
             </footer>
           </blockquote>

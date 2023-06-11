@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../footer/footer.css";
 
 export const Footer = () => {
@@ -39,9 +40,9 @@ export const Footer = () => {
             <ul className="list-unstyled">
               <li>
                 <button type="button" className="btn btn-light btn-lg mx-2">
-                  <a
+                  <Link
+                    to="https://wa.me/5493512203051/?text=Hola, Necesito más información sobre sus productos!"
                     className="text-muted"
-                    href="https://wa.me/5493512203051/?text=Hola, Necesito más información sobre sus productos!"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -49,7 +50,7 @@ export const Footer = () => {
                       className="fa fa-whatsapp"
                       style={{ color: "#a6be06" }}
                     ></i>
-                  </a>
+                  </Link>
                 </button>
               </li>
             </ul>
@@ -59,9 +60,9 @@ export const Footer = () => {
               <p className="text">Seguinos en Instagram</p>
               <li>
                 <button type="button" className="btn btn-light btn-lg mx-2">
-                  <a
+                  <Link
+                    to="https://www.instagram.com/opencup_/"
                     className="text-muted"
-                    href="https://www.instagram.com/opencup_/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -69,7 +70,7 @@ export const Footer = () => {
                       className="fab fa-instagram"
                       style={{ color: "#a6be06" }}
                     ></i>
-                  </a>
+                  </Link>
                 </button>
               </li>
             </ul>
@@ -77,7 +78,9 @@ export const Footer = () => {
         </div>
         <hr className="text" />
         <div className="row">
-          <p className="col-sm text">© Todos los derechos reservados | Desarrollado por TESA para OPENCUP</p>
+          <p className="col-sm text">
+            © Todos los derechos reservados | Desarrollado por TESA para OPENCUP
+          </p>
         </div>
       </div>
     </div>
