@@ -1,0 +1,9 @@
+.checkout{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #a6be06;
+    border-radius: 10px;
+    max-width: 450px;
+}

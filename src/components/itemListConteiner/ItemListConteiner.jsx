@@ -4,6 +4,7 @@ import { db } from "../../firebase/config";
 import { useParams } from "react-router-dom";
 import ItemList from "../itemList/ItemList";
 import { GlobalContext } from "../../context/GlobalContex";
+import Swal from "sweetalert2";
 
 const ItemListConteiner = () => {
   const [items, setItems] = useState([]);
@@ -26,14 +27,18 @@ const ItemListConteiner = () => {
         });
         setItems(productsCategory);
       })
-      .catch(error => {
-        console.log(error);
+      .catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Ha ocurrido un error',
+        });
       })
       .finally(() => {
         setLoading(false);
       });         
           
-  }, [itemCategory]);
+  }, [itemCategory, setLoading]);
 
   return (
     <div>

@@ -74,7 +74,7 @@ span.navbar-toggler-icon{
 }             
 
 .dropdown-menu{
-  --bs-dropdown-bg: rgba(255, 255, 255, 0);
+  --bs-dropdown-bg: #0d2d66;
 }
 
 element.style {

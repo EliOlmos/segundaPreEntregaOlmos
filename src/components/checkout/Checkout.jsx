@@ -14,6 +14,8 @@ import { CartContext } from "../../context/CartContext";
 import { GlobalContext } from "../../context/GlobalContex";
 import { db } from "../../firebase/config";
 import CheckoutForm from "../checkoutForm/CheckoutForm";
+import "../checkout/Checkout.css"
+import Swal from "sweetalert2";
 
 const Checkout = () => {
   const{setLoading}=useContext(GlobalContext)
@@ -66,18 +68,24 @@ const Checkout = () => {
         setOrderId(orderAdded.id);
         clearCart();
       } else {
-        console.error("hay productos que no tienen stock suficiente");
+        Swal.fire('Lo lamento, no tenemos suficiente stock de un producto de su carrito')
       }
-    } catch (error) {
-      console.log(error);
+    } 
+    catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Ha ocurrido un error',
+      });
     }
+
     finally {
     setLoading(false)}
   };
 
 
   if (orderId) {
-    return <h1>Se ha generado su orden con el identificador: {orderId}</h1>;
+    return <h3 className="checkout">Se ha generado su orden con el identificador: {orderId}</h3>
   }
 
   return (

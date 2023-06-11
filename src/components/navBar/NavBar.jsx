@@ -59,19 +59,7 @@ const NavBar = () => {
                   Sobre Nosotros
                 </NavLink>
               </li>
-              <li className="nav-item navbar-item">
-              <NavLink to={"/Contacto"}
-                  type="button"
-                  className="btn btn-light btn-lg  mx-2 texto-nav"
-                  style={{
-                    fontSize: "15px",
-                    padding: "10px 20px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Contacto
-                </NavLink>
-              </li>
+              
               <li className="nav-item navbar-item dropdown">
                 <button
                   className="navbar-nav dropdown-toggle btn btn-light btn-lg btn-floating mx-2"
@@ -145,25 +133,6 @@ const NavBar = () => {
                 </ul>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2 btn btn-light texto-nav"
-                type="search"
-                placeholder="..."
-                aria-label="Search"
-              />
-              <button
-                className="btn btn-light texto-nav"
-                type="submit"
-                style={{
-                  fontSize: "15px",
-                  padding: "10px 20px",
-                  fontWeight: "bold",
-                }}
-              >
-                Buscar
-              </button>
-            </form>
           </div>
         </div>
         <CartWidget />

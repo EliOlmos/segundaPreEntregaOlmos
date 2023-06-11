@@ -5,6 +5,7 @@ import {doc, getDoc} from "firebase/firestore"
 import {db} from '../../firebase/config'
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContex";
+import Swal from "sweetalert2";
 
 const ItemDetailContainer = () => {
   const {setLoading} = useContext(GlobalContext)
@@ -21,13 +22,17 @@ const ItemDetailContainer = () => {
       const productAdapted = {id: response.id, ...data}
       setItem(productAdapted)
     })
-    .catch(error => {
-      console.log(error);
+    .catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Ha ocurrido un error',
+      });
     })
      .finally(() => {
         setLoading(false);
       });
-  }, [itemId])
+  }, [itemId, setLoading])
   
   
   return (

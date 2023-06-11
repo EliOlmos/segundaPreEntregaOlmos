@@ -30,6 +30,7 @@ const CheckoutForm = ({ onConfirm }) => {
             className="Input"
             id='name'
             type="text"
+            name="Nombre y Apellido" required
             value={name}
             onChange={({ target }) => setName(target.value)}
           />
@@ -39,6 +40,7 @@ const CheckoutForm = ({ onConfirm }) => {
           <input
             className="Input"
             type="text"
+            name="Teléfono" required
             id='phone'
             value={phone}
             onChange={({ target }) => setPhone(target.value)}
@@ -50,6 +52,7 @@ const CheckoutForm = ({ onConfirm }) => {
             className="Input"
             id='email'
             type="text"
+            name="Email" required
             value={email}
             onChange={({ target }) => setEmail(target.value)}
           />
@@ -60,6 +63,7 @@ const CheckoutForm = ({ onConfirm }) => {
             className="Input"
             id='adress'
             type="text"
+            name="Direccion" required
             value={adress}
             onChange={({ target }) => setAdress(target.value)}
           />
