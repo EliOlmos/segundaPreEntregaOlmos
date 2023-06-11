@@ -68,3 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# E-commerce de Tienda de Tenis Opencup
+
+Este es un proyecto de e-commerce para una tienda de tenis. Permite a los usuarios explorar y comprar diferentes modelos de tenis de diversas marcas y estilos.
+
+## Dependencias
+
+- [SweetAlert](https://sweetalert2.github.io/): Biblioteca para mostrar alertas y mensajes interactivos.
+- [React Router Dom](https://reactrouter.com/): Enrutamiento para navegar entre las diferentes páginas del e-commerce.
+- [React Spinners](https://www.npmjs.com/package/react-spinners): Componentes de spinner para mostrar cargas y estados de carga.
+- [Bootstrap](https://getbootstrap.com/): Framework de CSS para crear interfaces de usuario responsivas y atractivas.
+- [Font Awesome](https://fontawesome.com/): Biblioteca de iconos para agregar iconografía a los elementos de la aplicación.
+
+## Instalación
+
+Para instalar las dependencias en tu proyecto, asegúrate de tener [Node.js](https://nodejs.org/) instalado. A continuación, ejecuta los siguientes comandos en la terminal:
+
+```bash
+# Instalar SweetAlert
+npm install sweetalert2
+
+# Instalar React Router Dom
+npm install react-router-dom
+
+# Instalar React Spinners
+npm install react-spinners
+
+# Instalar Bootstrap
+npm install bootstrap
+
+# Instalar Font Awesome
+npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+

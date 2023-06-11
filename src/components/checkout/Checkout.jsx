@@ -76,6 +76,8 @@ const Checkout = () => {
         icon: 'error',
         title: 'Oops...',
         text: 'Ha ocurrido un error',
+        color: "#a6be06",
+        confirmButtonColor: "#a6be06",
       });
     }
 
