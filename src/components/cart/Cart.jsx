@@ -39,6 +39,7 @@ const Cart = () => {
       {cart.map((product) => (
         <CartItem key={product.id} {...product} />
       ))}
+      <hr></hr>
       <h3>Total: ${total()}</h3>
       <button
         onClick={() => clearCart()}
